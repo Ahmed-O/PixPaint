@@ -18,9 +18,7 @@ body{
     padding: 50px 5%;
     height: 100vh;
     width: 100vw;
-    background-image: url(./imgs/squares-bg.jpg); 
-    /* background-image: url(./imgs/colour-1885352.jpg);  */
-    /* background-color: #f26d21; */
+    background-image: url(./imgs/squares-bg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -30,7 +28,6 @@ body{
     padding: 8px 10px;
     color: #fff;
     background-color: rgb(130, 21, 255);
-    /* border-radius: 15px; */
     font-size: 1.5rem;
     margin-bottom: 10px;
 }
@@ -45,14 +42,13 @@ main{
     background-color: #fff;
     height: 600px;
     width: 600px;
-    /* margin-bottom: 25px; */
     display: grid;
     grid-template-columns: repeat(24,1fr);
     grid-template-rows: repeat(24, 1fr);
     place-items: center;
-    /* border: 2px solid black; */
     outline: 2px solid black;
     box-shadow: 11px 12px 29px -1px rgba(0,0,0,0.33);
+    cursor: pointer;
 }
 
 .tools{
@@ -66,26 +62,17 @@ main{
     background-color: #fff;
     background-color: rgb(130, 21, 255);
     padding: 0 25px;
-    /* background-image: url(./imgs/square-2724387.jpg); */
-    /* background-size: cover; */
     background-position: center;
     box-shadow: 11px 12px 29px -1px rgba(0,0,0,0.33);
 }
 
 
-.grid-cell{
-    /* background-color: red; */
+.grid-cell {
     height: calc(600px / 24);
     width: calc(600px / 24);
-    /* border-top: 1px solid #ececec;
-    border-left: 1px solid #ececec; */
     border-top: 1px solid #dedede;
     border-left: 1px solid #dedede;
 }
-
-/* .grid-cell:hover{
-    background-color: rgba(0, 0, 0, 10%);
-} */
 
 .clicked{
     background-color: #f00;
@@ -93,8 +80,6 @@ main{
 
 .tools > *{
     text-decoration: none;
-    /* color: #fff;
-    font-size: 1.2rem; */
     margin-top: 60px;
 }
 
@@ -103,17 +88,15 @@ main{
     font-size: 1.5rem;
 }
 
+.btn {
+    border: solid white 2px;
+    border-radius: 10px;
+    padding: 7px 15px;
+}
 
-/* #picker{
-    padding-top: 50px;
-} */
-
-/* datalist {
-  display: flex;
-  justify-content: space-between;
-  color: #fff;
-  width: 50%;
-} */
+.btn:hover {
+    background-color: rgb(80, 0, 172);
+}
 
 select{
     font-family: 'Bebas Neue', cursive;

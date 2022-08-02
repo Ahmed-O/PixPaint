@@ -101,7 +101,6 @@ function listen() {
       hasDragged = false;
       if (mouseUpTriggered === false)
         gridCell.style.backgroundColor = colorPicker.color.hexString;
-      // console.log("mousedown");
     });
     gridCell.addEventListener("mouseover", () => {
       if (
@@ -111,19 +110,16 @@ function listen() {
       ) {
         gridCell.style.backgroundColor = colorPicker.color.hexString;
       }
-      // console.log("mouseover");
     });
     gridCell.addEventListener("mouseup", () => {
       isMouseDown = false;
       mouseUpTriggered = true;
       gridCell.style.backgroundColor = colorPicker.color.hexString;
-      // console.log("mouseup");
     });
     // Ensuring user doesn't accidentally drag grid cell
     gridCell.addEventListener("dragstart", (e) => {
       e.preventDefault();
       hasDragged = true;
-      // console.log("dragged");
 
       // mouse down event listener function in drag (place in function)
       isMouseDown = true;
@@ -144,12 +140,6 @@ function listen() {
 
 listen()
 
-// Clear button
-// Look thru all the grid cells and remove clicked class
-// Add transition?
-
-
-
 
 // Erase tool
 // Need to incorporate with the coloring tool b/c this one can be toggled on or off 
@@ -167,15 +157,12 @@ let clearBtn = document.querySelector('#clear')
 clearBtn.addEventListener('click', ()=>{
   document.querySelectorAll('.grid-cell').forEach((gridCell,index)=>{
      setTimeout(() => {
-      gridCell.style.backgroundColor = "#fff"
-     }, (GRID_SIZE/20) * (index+1))
+       gridCell.style.backgroundColor = "#fff";
+     }, (GRID_SIZE / 100) * (index + 1));
   })
 })
 
 
-
-
-
 // Notes
-// Glitch where mouseover doesn't work well b/c mouseup needs to be in the document otherwise it only fires when mouseup occurs over the grid cell element
+// Had glitch where mouseover doesn't work well b/c mouseup needs to be in the document otherwise it only fires when mouseup occurs over the grid cell element
 // Can use document event listener to check for mouse up event with a boolean but still doesn't work if mouseup event is triggered by moving mouse too fast. This is because grid cell is being dragged so I need to make draggable false and prevent default behavior for the drag event 
